@@ -9,6 +9,10 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 #USER PAGES
+@app.route('/', methods=['GET', 'POST'])
+def home():
+		return render_template('home.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 		return render_template('STUlogin.html')
