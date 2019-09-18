@@ -8,6 +8,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+
+
 #USER PAGES
 @app.route('/', methods=['GET', 'POST'])
 def home():
